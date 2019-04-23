@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#head{
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+#body {
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#answer_container{
+    /*margin: 30px;*/
+    padding: 30px;
+    display: inline-block;
+    /*border: yellow 1px solid;*/
+    box-shadow: gray 3px 5px  10px;
+}
+
+#select_img {
+    height: 300px;
+    width: auto;
+    /*border: aquamarine 1px solid;*/
+}
+
+#prediction {
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+#form_container {
+    padding: 20px 0px;
+}
+
+#title {
+    display: inline-block;
+    background-color: #1E90FF;
+    padding: 5px;
+    width: inherit;
+}
+
+#title a{
+    color: white;
+}

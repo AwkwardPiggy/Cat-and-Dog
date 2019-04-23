@@ -1,0 +1,36 @@
+<!-- templates/users/index.html -->
+<!doctype html>
+<html>
+<head>
+    <title>猫狗大战</title>
+    <meta charset="utf-8">
+    <link href="../../static/css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="head">
+        <div id="title"><a>是猫还是狗</a></div>
+    </div>
+
+    <div id="body">
+
+        {% if ctx.time != 0 %}
+            <div id="answer_container">
+                <div id="prediction">
+                    <ul><li>{{ ctx.answer.result }}</li></ul>
+                </div>
+                <div>
+                    <img id="select_img" src="/media/{{ ctx.user.headimg }}">
+                </div>
+            </div>
+        {% endif %}
+
+        <div id="form_container">
+            <form method="post" enctype="multipart/form-data" action="{% url 'users:add' %}">
+                {% csrf_token %}
+                {{ ctx.form }}
+                <input type="submit" value="确认"/>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
